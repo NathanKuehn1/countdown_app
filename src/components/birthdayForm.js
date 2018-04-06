@@ -11,6 +11,7 @@ class Birthdayform extends Component {
 
         this.handleChange = this.handleChange.bind(this);
         this.handleGenerate = this.handleGenerate.bind(this);
+        this.handleChangeDate = this.handleChangeDate.bind(this);
 
         this.state = {
             startDate: moment(),
@@ -28,7 +29,11 @@ class Birthdayform extends Component {
     handleGenerate() {
         this.setState({
             formCompleted: true
-        });
+        })
+    }
+
+    handleChangeDate() {
+
     }
 
     render() {
@@ -36,11 +41,11 @@ class Birthdayform extends Component {
             <div>
                 {
                     this.state.formCompleted ? 
-                    
                     <div>
                         <Clock birthdayFormState={this.state}/>
+                        <a onClick={this.handleChangeDate}>Change Date</a>
                     </div>
-                    :
+                :
                     <div>
                         <h1>Birthday Form Component!</h1>
                         <DatePicker
@@ -48,11 +53,11 @@ class Birthdayform extends Component {
                             onChange={this.handleChange}
                             />
                         <a onClick={this.handleGenerate}>Generate Countdown</a>
-                
                     </div>
 
                 }
                 
+
             </div>
         )
     }
