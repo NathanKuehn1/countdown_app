@@ -99,7 +99,6 @@ renderMessage = function() {
     )
 }.bind(this)
 
-
 render() {
     const data = this.state.timeRemaining
         return (
