@@ -38,7 +38,7 @@
 }
 
 .message-container__title {
-    @include center-item($pull-x: 0, $pull-y: 0, $top: 5%, $left: 10%);
+    @include center-item($pull-x: 0, $pull-y: 0, $top: 0%, $left: 10%);
     font-family: var(--roboto-condensed);
     color: var(--minor-primary);
     font-size: 22px;
@@ -46,10 +46,10 @@
 }
 
 .message-container__message {
-    @include center-item($pull-x: 0, $pull-y: 0, $top: 15%, $left: 10%);
+    @include center-item($pull-x: 0, $pull-y: 0, $top: 5%, $left: 17%);
     font-family: var(--roboto-condensed);
     font-size: 90px;
-    font-weight: bold;
+    font-weight: italic;
     width: 100%;
 }
 
