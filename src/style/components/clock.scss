@@ -11,6 +11,7 @@
 }
 
 .countdown__clock {
+    @include clock-dimentions;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -32,4 +33,32 @@
     font-size: 18px;
     font-weight: 100;
 
+}
+
+.message-container {
+   @include clock-dimentions;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%);
+   margin-top: 20px;
+}
+
+.message-container__title {
+    font-family: var(--roboto-condensed);
+    color: var(--minor-primary);
+    font-size: 22px;
+    position: absolute;
+    left: 10%;
+    top: 5%;
+}
+
+.message-container__message {
+    font-family: var(--roboto-condensed);
+    font-size: 90px;
+    font-weight: bold;
+    position: absolute;
+    left: 10%;
+    bottom: 5%;
+    width: 100%;
 }
